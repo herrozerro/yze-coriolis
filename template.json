@@ -13,6 +13,11 @@
           "min": 0,
           "max": 10
         },
+        "actionPoints": {
+          "value": 0,
+          "min": 0,
+          "max": 3
+        },
         "experience": {
           "value": 0,
           "min": 0,
@@ -200,8 +205,7 @@
         "cabin": {
           "description": ""
         },
-        "birr": 0,
-        "keyArt": ""
+        "birr": 0
       }
     },
     "character": {

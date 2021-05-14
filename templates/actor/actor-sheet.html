@@ -1,7 +1,7 @@
 <form class="{{cssClass}}" autocomplete="off">
   <div class="sheet-container">
-    <div class="key-art-container">
-      <img class="vertical-img" src="{{data.keyArt}}" data-edit="data.keyArt" title="{{actor.name}}">
+    <div class="picture key-art-container">
+      <img class="profile-img vertical-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}">
     </div>
     <div class="gradient-overlay"></div>
     <div class="always-visible-stats">
@@ -99,6 +99,25 @@
             {{/with}}
             {{/each}}
             <span class="bar-value">{{data.reputation.value}}</span>
+          </div>
+        </li>
+        <li class="entry flexrow">
+          <div class="stat-label">{{localize "YZECORIOLIS.ActionPoints"}}</div>
+          <div class="bar ap-bar fr-basic">
+            {{#each actor.actionBlocks as |on index|}}
+            {{#with ../data as | data |}}
+            {{#if on}}
+            <div class="bar-segment on" data-name="data.actionPoints.value" data-index={{index}}
+              data-current={{data.actionPoints.value}} data-min={{data.actionPoints.min}} data-max={{data.actionPoints.max}}>
+            </div>
+            {{else}}
+            <div class="bar-segment off" data-name="data.actionPoints.value" data-index={{index}}
+              data-current={{data.actionPoints.value}} data-min={{data.actionPoints.min}} data-max={{data.actionPoints.max}}>
+            </div>
+            {{/if}}
+            {{/with}}
+            {{/each}}
+            <span class="bar-value">{{data.actionPoints.value}}</span>
           </div>
         </li>
         <li class="entry flexrow">

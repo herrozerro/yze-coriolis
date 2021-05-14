@@ -43,11 +43,14 @@ export class yzecoriolisActorSheet extends ActorSheet {
     const actorData = sheetData.actor;
     const data = actorData.data;
 
+    console.log(data)
+
     actorData.radiationBlocks = prepDataBarBlocks(data.radiation.value, data.radiation.max);
     actorData.xpBlocks = prepDataBarBlocks(data.experience.value, data.experience.max);;
     actorData.repBlocks = prepDataBarBlocks(data.reputation.value, data.reputation.max);
     actorData.hpBlocks = prepDataBarBlocks(data.hitPoints.value, data.hitPoints.max);
     actorData.mindBlocks = prepDataBarBlocks(data.mindPoints.value, data.mindPoints.max);
+    actorData.actionBlocks = prepDataBarBlocks(data.actionPoints.value, data.actionPoints.max);
   }
 
 
